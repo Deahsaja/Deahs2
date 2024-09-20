@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dena Ahmad Septian</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f4f4f9, #e2e2e2);
+            color: #333;
+        }
+        header {
+            background: #1e1e1e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        }
+        header .profile-logo {
+            width: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 5px solid #f39c12;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+        header .profile-logo:hover {
+            transform: rotate(360deg);
+        }
+        .social-media-links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .social-media-links a:hover {
+            color: #f39c12;
+            transform: scale(1.2);
+            transition: color 0.3s, transform 0.3s;
+        }
+        .highlight-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 15px;
+            background: #fff;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        .highlight-item {
+            flex: 0 0 auto;
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            padding: 20px;
+            margin: 0 10px;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            transition: background 0.3s, transform 0.3s;
+        }
+        .highlight-item:hover {
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+            transform: scale(1.1);
+        }
+        .content-section {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 25px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            position: relative;
+            display: none;
+        }
+        h2 {
+            color: #333;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+        }
+        .photo-grid, .video-grid, .music-grid {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .photo-item, .video-item, .music-item {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+        .photo-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+        .video-item video, .music-item audio {
+            width: 100%;
+            height: auto;
+        }
+        .text-content {
+            text-align: center;
+            color: #666;
+            font-size: 18px;
+        }
+        .content-section img, .content-section video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e1e1e;
+            color: #fff;
+            position: relative;
+            box-shadow: 0 -6px 12px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="profile.jpg" alt="Profile" class="profile-logo">
+        <h1>Dena Ahmad Septian</h1>
+        <div class="social-media-links">
+            <a href="https://instagram.com/xxdeahs" target="_blank">Instagram</a>
+            <a href="https://facebook.com/xxdeahs" target="_blank">Facebook</a>
+            <a href="https://wa.me/6283187341431" target="_blank">WhatsApp</a>
+            <a href="https://tiktok.com/@deahs" target="_blank">TikTok</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="highlight-container">
+            <div class="highlight-item" data-target="foto-content">📸 Foto</div>
+            <div class="highlight-item" data-target="video-content">🎥 Video</div>
+            <div class="highlight-item" data-target="music-content">🎶 Musik Favorit</div>
+            <div class="highlight-item" data-target="project-content">📂 Proyek</div>
+            <div class="highlight-item" data-target="travel-content">🌍 Perjalanan</div>
+            <div class="highlight-item" data-target="hobby-content">🎨 Hobi</div>
+            <div class="highlight-item" data-target="school-content">🏫 Sekolah</div>
+            <div class="highlight-item" data-target="gym-content">💪 Gym</div>
+            <div class="highlight-item" data-target="books-content">📚 Buku</div>
+            <div class="highlight-item" data-target="career-content">💼 Karier</div>
+        </div>
+
+        <!-- Section for Foto -->
+        <section id="foto-content" class="content-section">
+            <h2>Foto</h2>
+            <div class="photo-grid">
+                <div class="photo-item"><img src="photo1.jpg" alt="Foto 1"><p>Judul: Halaman yang Terbuka<br>Deskripsi: Di setiap halaman buku, tersimpan cerita yang menunggu ditemukan.</p></div>
+                <div class="photo-item"><img src="photo2.jpg" alt="Foto 2"><p>Judul: Siap Untuk Momen Sempurna<br>Deskripsi: Helm terpasang, dunia terasa lebih luas, siap menikmati kesendirian.</p></div>
+                <div class="photo-item"><img src="photo3.jpg" alt="Foto 3"><p>Judul: Langkah Awal di Pagi Jalak Harupat<br>Deskripsi: Menyatu dengan semangat pagi, setiap langkah joging membawa energi baru di bawah langit yang cerah.</p></div>
+                <div class="photo-item"><img src="photo4.jpg" alt="Foto 4"><p>Judul: Mengabadikan Pagi di Jalak Harupat<br>Deskripsi: Dengan lensa di tangan, setiap sudut stadion menjadi kenangan indah dalam bingkai foto.</p></div>
+                <div class="photo-item"><img src="photo5.jpg" alt="Foto 5"><p>Judul: Langkah Bersama di Kunjungan Industri<br>Deskripsi: Tiga teman, satu tujuan—menggali pengalaman baru di dunia industri, mengikat kenangan di setiap langkah bersama.</p></div>
+                <div class="photo-item"><img src="photo6.jpg" alt="Foto 6"><p>Judul: Menggambar<br>Deskripsi: Hanya Gabut Saja Teman-teman.</p></div>
+                <div class="photo-item"><img src="photo7.jpg" alt="Foto 7"><p>Judul: Kunjin<br>Deskripsi: Bersama Ibu Guru Wali Kelas.</p></div>
+                <div class="photo-item"><img src="photo8.jpg" alt="Foto 8"><p>Judul: Done Books<br>Deskripsi: Kusarankan untuk Membaca Buku Ini.</p></div>
+                <div class="photo-item"><img src="photo9.jpg" alt="Foto 9"><p>Judul: Upacara Senin<br>Deskripsi: Menjadi pembaca doa.</p></div>
+                <div class="photo-item"><img src="photo10.jpg" alt="Foto 10"><p>Judul: D'mucle<br>Deskripsi: Latihan Full Back Saja.</p></div>
+            </div>
+        </section>
+
+        <!-- Section for Video -->
+        <section id="video-content" class="content-section">
+            <h2>Video</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <video src="video1.mp4" controls playsinline controlslist="nodownload"></video>
+                    <p>Judul: Semangat Bersama di Ruang Gym<br>Deskripsi: Dengan tiga teman, setiap angkatan beban terasa lebih ringan, semangat membara, dan tujuan semakin dekat.</p>
+                </div>
+                <div class="video-item">
+                    <video src="video2.mp4" controls playsinline controlslist="nodownload"></video>
+                    <p>Judul: 17an Tanpa Batas: JJ Gabut Bersama<br>Deskripsi: Di tengah suasana kemerdekaan, dua teman bersatu dalam kebebasan, ber-JJ ria dan merayakan momen dengan cara yang paling santai.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section for Musik Favorit -->
+        <section id="music-content" class="content-section">
+            <h2>Musik Favorit</h2>
+            <div class="music-grid">
+                <div class="music-item">
+                    <audio controls src="fixyou.mp3" controlslist="nodownload"></audio>
+                    <p>Judul: Fix You - Coldplay<br>Deskripsi: Sebuah lagu yang menghangatkan hati dan mengingatkan kita untuk selalu berusaha, bahkan di saat-saat sulit.</p>
+                </div>
+                <div class="music-item">
+                    <audio controls src="anotherlove.mp3" controlslist="nodownload"></audio>
+                    <p>Judul: Another Love - Tom Odell<br>Deskripsi: Melodi yang menyentuh, tentang kehilangan dan pencarian cinta yang sejati.</p>
+                </div>
+                <div class="music-item">
+                    <audio controls src="photograph.mp3" controlslist="nodownload"></audio>
+                    <p>Judul: Photograph - Ed Sheeran<br>Deskripsi: Mengabadikan kenangan dalam bait-bait lagu yang indah.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section for Projects -->
+<section id="project-content" class="content-section">
+    <h2>Proyek</h2>
+    <p>Judul: My Web<br> Deskripsi: Telah mengembangkan website portofolio pribadi yang menampilkan proyek dan pengalaman kerja, serta menggunakan teknologi HTML, CSS, dan JavaScript.</p>
+</section>
+
+<!-- Section for Travel -->
+<section id="travel-content" class="content-section">
+    <h2>Perjalanan</h2>
+    <p>Judul: Kunjin<br> Deskripsi: Pernah mengunjungi Beberapa Lembaga, menikmati keindahan luar dan ada juga berbagai makanan khas daerah.</p>
+</section>
+
+<!-- Section for Hobi -->
+<section id="hobby-content" class="content-section">
+    <h2>Hobi</h2>
+    <p>Judul: Suka fotografi<br> Di alam, terutama di daerah pegunungan, serta menggambar dan menciptakan karya seni digital.</p>
+</section>
+
+<!-- Section for School -->
+<section id="school-content" class="content-section">
+    <h2>Sekolah</h2>
+    <p>Menjalani pengalaman belajar yang menyenangkan di SMK BinaPutra, aktif dalam organisasi dan mengikuti berbagai kegiatan ekstrakurikuler.</p>
+</section>
+
+<!-- Section for Gym -->
+<section id="gym-content" class="content-section">
+    <h2>Gym</h2>
+    <p>Hari/Tanggal: 20-September-2024<br>Latihan: Full Back, Biceps, Dan Trapz</p>
+</section>
+
+<!-- Section for Books -->
+<section id="books-content" class="content-section">
+    <h2>Buku</h2>
+    <p>Hari/Tanggal: 20-September-2024<br>Judul: Psychology Of Money</p>
+</section>
+
+<!-- Section for Career -->
+<section id="career-content" class="content-section">
+    <h2>Karier</h2>
+    <p>Memiliki pengalaman kerja di bidang teknologi informasi, dengan fokus pada pengembangan perangkat lunak dan manajemen proyek.</p>
+</section>
+    </main>
+
+    <footer>
+        <p>@Deahs 2024</p>
+    </footer>
+
+    <script>
+        const highlightItems = document.querySelectorAll('.highlight-item');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        highlightItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const targetId = item.getAttribute('data-target');
+                
+                contentSections.forEach(section => {
+                    if (section.id === targetId) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
